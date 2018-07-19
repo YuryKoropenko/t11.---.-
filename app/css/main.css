@@ -1,0 +1,350 @@
+@charset "UTF-8";
+/*Сброс*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, samp, small,
+strike, strong, sub, sup, tt, var, b, i,
+dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer,
+header, hgroup, nav, output, ruby, section,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button, button:active, button:focus,
+input, input:active, input:focus {
+  outline: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+b, strong {
+  font-family: "GilroyExtraBold", sans-serif;
+}
+
+/*Внешние блоки*/
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.25;
+  font-family: "GilroyLight", sans-serif;
+  overflow-x: hidden;
+}
+
+/*header*/
+.header__top {
+  background-color: #000;
+}
+
+.header__h-nav {
+  text-align: right;
+}
+
+.header__h-logo {
+  padding: 22px 0;
+  position: relative;
+}
+
+.header__h-logo::after {
+  content: '';
+  width: 1px;
+  display: block;
+  height: 69px;
+  background-color: #e6e6e6;
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  margin-top: -34.5px;
+}
+
+.header__h-application {
+  padding: 43px 0 0;
+  text-align: center;
+}
+
+.header__h-callback {
+  text-align: right;
+  padding: 45px 0 0;
+}
+
+.header__h-catalog {
+  display: block;
+  width: 100%;
+  background-color: #e03359;
+}
+
+/*Компоненты*/
+.h-nav {
+  font-size: 0;
+}
+
+.h-nav__item {
+  display: inline-block;
+  padding: 0 28px;
+}
+
+.h-nav__item:first-child {
+  padding-left: 0;
+}
+
+.h-nav__item:last-child {
+  padding-right: 0;
+}
+
+.h-nav__link {
+  display: block;
+  line-height: 47px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.h-nav__link:hover {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.h-logo {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.h-logo__link {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+.h-logo__img {
+  display: block;
+  width: 100%;
+}
+
+.h-logo__description {
+  padding-left: 32px;
+  display: block;
+  width: 326px;
+  color: #000;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.h-application {
+  display: inline-block;
+  height: 63px;
+  line-height: 56px;
+  text-align: center;
+  padding: 0 55px;
+  border: 2px solid #e03359;
+  background-color: #e03359;
+  color: #fff;
+  font-size: 17px;
+  font-family: "GilroyExtraBold", sans-serif;
+  -webkit-box-shadow: 3px 3px 0px 0px black;
+  -moz-box-shadow: 3px 3px 0px 0px black;
+  box-shadow: 3px 3px 0px 0px black;
+}
+
+.h-application:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #fff;
+  color: #e03359;
+}
+
+.h-callback {
+  display: inline-block;
+}
+
+.h-callback__phone {
+  display: block;
+  font-size: 26px;
+  color: #000;
+  padding-left: 34px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.h-callback__phone::before {
+  content: '';
+  width: 19px;
+  height: 21px;
+  background-image: url(../img/icons/h-phone.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -10.5px;
+}
+
+.h-callback__button {
+  display: inline-block;
+  color: #e03359;
+  border-bottom: 1px solid #e03359;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.h-callback__button:hover {
+  text-decoration: none;
+  color: #e03359;
+  border: none;
+}
+
+.h-catalog {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h-catalog__item {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.h-catalog__item::after {
+  content: '';
+  display: block;
+  height: 28px;
+  width: 1px;
+  background-color: #e44c6d;
+  position: absolute;
+  left: -0.5px;
+  top: 50%;
+  margin-top: -14px;
+}
+
+.h-catalog__item:first-child::after {
+  display: none !important;
+}
+
+.h-catalog__link {
+  padding: 0 16.78px;
+  line-height: 58px;
+  display: block;
+}
+
+.h-catalog__wp {
+  display: inline-block;
+  padding-right: 26px;
+  position: relative;
+  font-size: 17px;
+  color: #fff;
+}
+
+.h-catalog__wp::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 10px;
+  height: 6px;
+  margin-top: -3px;
+  background-image: url(../img/icons/h-arrow.png);
+  background-size: cover;
+  display: block;
+}
+
+.h-catalog .active .h-catalog__link {
+  background-color: #000;
+  position: relative;
+}
+
+.h-catalog .active .h-catalog__link::before {
+  content: '';
+  display: block;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #000;
+  left: 0;
+  z-index: 20;
+}
+
+.h-catalog .active .h-catalog__link::after {
+  content: '';
+  display: block;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #000;
+  right: 0;
+  z-index: 20;
+}
+
+.h-catalog .active::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #000000 transparent transparent transparent;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  margin-left: -6px;
+  z-index: 12;
+}
+
+.h-catalog__submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #ea4b6e;
+  width: 257px;
+  display: none;
+  z-index: 10;
+}
+
+.h-catalog__subitem {
+  border-bottom: 1px solid #ec5f7e;
+}
+
+.h-catalog__subitem:last-child {
+  border: none;
+}
+
+.h-catalog__sublink {
+  color: #fff;
+  font-size: 16px;
+  line-height: 31px;
+  padding: 10px 16.78px;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.h-catalog__sublink:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #d34766;
+}

@@ -1,0 +1,205 @@
+@import "bourbon/bourbon"
+@import "sass/_blocks"
+
+/*Компоненты*/
+
+.h-nav
+	font-size: 0
+	&__item
+		display: inline-block
+		padding: 0 28px
+		&:first-child
+			padding-left: 0
+		&:last-child
+			padding-right: 0
+	&__link
+		display: block
+		line-height: 47px
+		color: #fff
+		font-size: 17px
+		&:hover
+			color: #fff
+			text-decoration: none
+			opacity: 0.6
+
+.h-logo
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: left
+	align-items: center
+	&__link
+		display: block
+		width: 100px
+		height: auto
+	&__img
+		display: block
+		width: 100%
+	&__description
+		padding-left: 32px
+		display: block
+		width: 326px
+		color: #000
+		font-size: 16px
+		line-height: 22px
+
+.h-application
+	display: inline-block
+	height: 63px
+	line-height: 56px
+	text-align: center
+	padding: 0 55px
+	border: 2px solid #e03359
+	background-color: #e03359
+	color: #fff
+	font-size: 17px
+	font-family: "GilroyExtraBold", sans-serif
+	-webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,1)
+	-moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,1)
+	box-shadow: 3px 3px 0px 0px rgba(0,0,0,1)
+	&:hover
+		text-decoration: none
+		color: #fff
+		background-color: #fff
+		color: #e03359
+
+.h-callback
+	display: inline-block
+	&__phone
+		display: block
+		font-size: 26px
+		color: #000
+		padding-left: 34px
+		position: relative
+		padding-bottom: 5px
+		&::before
+			content: ''
+			width: 19px
+			height: 21px
+			background-image: url(../img/icons/h-phone.png)
+			background-repeat: no-repeat
+			background-size: cover
+			display: block
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -10.5px
+	&__button
+		display: inline-block
+		color: #e03359
+		border-bottom: 1px solid #e03359
+		font-size: 18px
+		line-height: 100%
+		&:hover
+			text-decoration: none
+			color: #e03359
+			border: none
+
+.h-catalog
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__item
+		display: block
+		text-align: center
+		position: relative
+		&::after
+			content: ''
+			display: block
+			height: 28px
+			width: 1px
+			background-color: #e44c6d
+			position: absolute
+			left: -0.5px
+			top: 50%
+			margin-top: -14px
+		&:first-child
+			&::after
+				display: none !important
+	&__link
+		padding: 0 16.78px
+		line-height: 58px
+		display: block
+	&__wp
+		display: inline-block
+		padding-right: 26px
+		position: relative
+		font-size: 17px
+		color: #fff
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			top: 50%
+			width: 10px
+			height: 6px
+			margin-top: -3px
+			background-image: url(../img/icons/h-arrow.png)
+			background-size: cover
+			display: block
+	.active
+		.h-catalog__link
+			background-color: #000
+			position: relative
+			&::before
+				content: ''
+				display: block
+				width: 1px
+				top: 0
+				bottom: 0
+				position: absolute
+				background-color: #000
+				left: 0
+				z-index: 20
+			&::after
+				content: ''
+				display: block
+				width: 1px
+				top: 0
+				bottom: 0
+				position: absolute
+				background-color: #000
+				right: 0
+				z-index: 20
+		&::before
+			content: ''
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 6px 6px 0 6px
+			border-color: #000000 transparent transparent transparent
+			position: absolute
+			bottom: -6px
+			left: 50%
+			margin-left: -6px
+			z-index: 12
+	&__submenu
+		position: absolute
+		left: 0
+		top: 100%
+		background-color: #ea4b6e
+		width: 257px
+		display: none
+		z-index: 10
+	&__subitem
+		border-bottom: 1px solid #ec5f7e
+		&:last-child
+			border: none
+	&__sublink
+		color: #fff
+		font-size: 16px
+		line-height: 31px
+		padding: 10px 16.78px
+		display: block
+		width: 100%
+		text-align: left
+		&:hover
+			text-decoration: none
+			color: #fff
+			background-color: #d34766

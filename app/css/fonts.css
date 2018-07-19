@@ -1,0 +1,11 @@
+/* font-family: "GilroyLight" */
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/RadomirTinkovGilroyLight.otf");
+}
+
+/* font-family: "GilroyExtraBold" */
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/RadomirTinkovGilroyExtraBold.otf");
+}

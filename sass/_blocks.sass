@@ -1,0 +1,43 @@
+@import "bourbon/bourbon"
+@import "sass/_custom"
+
+/*Внешние блоки*/
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.25
+	font-family: "GilroyLight", sans-serif
+	overflow-x: hidden
+
+/*header*/
+.header
+	&__top
+		background-color: #000
+	&__h-nav
+		text-align: right
+	&__bottom
+	&__h-logo
+		padding: 22px 0
+		position: relative
+		&::after
+			content: ''
+			width: 1px
+			display: block
+			height: 69px
+			background-color: #e6e6e6
+			position: absolute
+			right: 55px
+			top: 50%
+			margin-top: -34.5px
+	&__h-application
+		padding: 43px 0 0
+		text-align: center
+	&__h-callback
+		text-align: right
+		padding: 45px 0 0
+	&__h-catalog
+		display: block
+		width: 100%
+		background-color: #e03359
