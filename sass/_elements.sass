@@ -123,7 +123,7 @@
 			&::after
 				display: none !important
 	&__link
-		padding: 0 16.78px
+		padding: 0 10.78px
 		line-height: 58px
 		display: block
 	&__wp
@@ -184,7 +184,7 @@
 		left: 0
 		top: 100%
 		background-color: #ea4b6e
-		width: 257px
+		width: 245px
 		display: none
 		z-index: 10
 	&__subitem
@@ -195,7 +195,7 @@
 		color: #fff
 		font-size: 16px
 		line-height: 31px
-		padding: 10px 16.78px
+		padding: 10px 10.78px
 		display: block
 		width: 100%
 		text-align: left
@@ -203,3 +203,339 @@
 			text-decoration: none
 			color: #fff
 			background-color: #d34766
+
+.p-baner
+	position: relative
+	&__slider
+	&__item
+		height: 254px
+		width: 100%
+		background-size: cover
+		background-position: center bottom
+	&__popup
+		padding: 36px 24px
+		width: 50%
+		position: absolute
+		z-index: 8
+		margin-bottom: 27px
+		background-image: url(../img/baner-popup.jpg)
+		background-repeat: repeat-y
+		background-size: 100% auto
+		position: absolute
+		left: 33px
+		top: 31px
+		&::before
+			content: ''
+			height: 3px
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			background-color: #e03359
+			display: block
+		&::after
+			content: ''
+			display: block
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 27px 20px 0 0
+			border-color: #000000 transparent transparent transparent
+			display: block
+			position: absolute
+			left: 0
+			bottom: -27px
+	&__title
+		color: #1d1d1b
+		font-size: 24px
+		text-transform: uppercase
+	&__description
+		font-size: 16px
+		color: #000
+		display: block
+		padding-top: 20px
+		padding-bottom: 12px
+	&__button
+		height: 56px
+		line-height: 49px
+		display: inline-block
+		border: 2px solid #e03359
+		font-size: 17px
+		background-color: #e03359
+		color: #fff
+		text-align: center
+		font-family: "GilroyExtraBold", sans-serif
+		-webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,1)
+		-moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,1)
+		box-shadow: 3px 3px 0px 0px rgba(0,0,0,1)
+		padding: 0 40px
+		&:hover
+			background-color: #fff
+			color: #e03359
+			text-decoration: none
+
+.p-title
+	color: #000
+	display: inline-block
+	font-size: 26px
+	padding-bottom: 20px
+
+.p-advantages
+	background-color: #fff
+	padding: 26px 16px
+	position: relative
+	&-left
+		text-align: right
+		margin-right: 18px
+		.p-advantages__title
+			padding-right: 48px
+		.p-advantages__icon
+			background-position: right center
+			right: 0
+		&-top
+			&::after
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 9px 0 0 12px
+				border-color: transparent transparent transparent #000000
+				position: absolute
+				bottom: 0
+				right: -12px
+		&-center
+			&::after
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 9px 0 9px 12px
+				border-color: transparent transparent transparent #000000
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				-webkit-transform: translateY(-50%)
+				right: -12px
+		&-bottom
+			&::after
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 9px 12px 0 0
+				border-color: #000000 transparent transparent transparent
+				position: absolute
+				top: 0
+				right: -12px
+
+	&-right
+		text-align: left
+		margin-left: 18px
+		.p-advantages__title
+			padding-left: 48px
+		.p-advantages__icon
+			background-position: left center
+			left: 0
+		&-top
+			&::after
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0 0 9px 12px
+				border-color: transparent transparent #000000 transparent
+				position: absolute
+				bottom: 0
+				left: -12px
+		&-center
+			&::after
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 9px 12px 9px 0
+				border-color: transparent #000000 transparent transparent
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				-webkit-transform: translateY(-50%)
+				left: -12px
+		&-bottom
+			&::after
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0 12px 9px 0
+				border-color: transparent #000000 transparent transparent
+				position: absolute
+				top: 0
+				left: -12px
+
+	&__title
+		position: relative
+		text-transform: uppercase
+		font-size: 16px
+	&__icon
+		display: block
+		position: absolute
+		width: 48px
+		height: 40px
+		top: 50%
+		margin-top: -20px
+		background-repeat: no-repeat
+	&__description
+		font-size: 15px
+		line-height: 22px
+		color: #000
+		height: 22*3 + px
+		overflow: hidden
+		display: block
+		margin-top: 15px
+
+.p-advantagesimg
+	width: 100%
+	display: block
+	height: auto
+	&__wp
+		margin-left: -80px
+		margin-right: -80px
+		width: auto
+		height: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		margin-top: 18px
+
+.p-paperview
+	height: 200px
+	display: block
+	width: 100%
+	display: block
+	background-size: cover
+	background-position: center center
+	position: relative
+	&::after
+		content: ''
+		display: block
+		left: 0
+		right: 0
+		top: 0
+		position: absolute
+		bottom: 0
+		background-image: url(../img/p-pattern.png)
+		background-repeat: repeat-x
+		background-position: center bottom
+		z-index: 1
+	&__title
+		position: absolute
+		bottom: 18px
+		left: 0
+		right: 0
+		z-index: 2
+		font-size: 17px
+		color: #fff
+		font-family: "GilroyExtraBold", sans-serif
+		text-align: center
+		padding: 12px 10px 0
+		&::before
+			content: ''
+			display: block
+			height: 4px
+			width: 29px
+			background-color: #e03359
+			top: 0
+			left: 0
+			right: 0
+			position: absolute
+			margin: 0 auto
+
+.p-assortpackage
+	&__title
+		color: #fff
+		font-size: 26px
+		position: relative
+		display: block
+		text-align: center
+		padding-top: 28px
+		padding-bottom: 24px
+		&::before
+			content: ''
+			display: block
+			width: 45px
+			height: 5px
+			background-color: #e03359
+			margin: 0 auto
+			left: 0
+			right: 0
+			top: 0
+			position: absolute
+	&__description
+		font-size: 16px
+		line-height: 24px
+		color: #fff
+		display: block
+
+.p-prod
+	border: 1px solid #e6e6e6
+	display: block
+	&:hover
+		text-decoration: none
+		color: inherit
+	&__img
+		height: 247px
+		width: 100%
+		display: block
+		background-size: cover
+		background-position: center center
+	&__info
+		margin-top: 19px
+		position: relative
+		padding-top: 18px
+		padding-left: 17px
+		padding-right: 17px
+		padding-bottom: 22px
+		&::before
+			content: ''
+			display: block
+			left: 0
+			right: 0
+			position: absolute
+			width: 38px
+			height: 1px
+			background-color: #e03359
+			margin: 0 auto
+			top: 0
+		&::after
+			content: ''
+			display: block
+			left: 0
+			right: 0
+			position: absolute
+			width: 38px
+			height: 1px
+			background-color: #e03359
+			margin: 0 auto
+			top: 5px
+	&__title
+		display: block
+		text-align: center
+		font-size: 20px
+		color: #000
+		font-family: "GilroyExtraBold", sans-serif
+	&__description
+		display: block
+		margin-top: 12px
+		font-size: 15px
+		color: #5f5f5f
+		line-height: 24px
+		height: 24 * 3 + px
