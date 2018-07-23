@@ -32,3 +32,48 @@ ol, ul
 
 b, strong
 	font-family: "GilroyExtraBold", sans-serif
+
+a, button
+	transition: all ease-out 0.3s
+	-webkit-transition: all ease-out 0.3s
+	-o-transition: all ease-out 0.3s
+	-moz-transition: all ease-out 0.3s
+	outline: none !important
+
+.owl-nav
+	button
+		width: 31px
+		height: 31px
+		display: block
+		text-indent: -9999px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		-webkit-transform: translateY(-50%)
+		z-index: 99
+		background-image: url(../img/icons/slider-arrow.png) !important
+		&:hover
+			opacity: 0.6
+.owl-prev
+	left: -92px
+	background-position: left center !important
+.owl-next
+	right: -92px
+	background-position: right center !important
+
+@mixin placeholder($color)
+	&::-webkit-input-placeholder
+		color: $color
+	&::-moz-placeholder
+		color: $color
+	&:-moz-placeholder
+		color: $color
+	&:-ms-input-placeholder
+		color: $color
+
+.fancybox-close-small svg
+	fill: #fff
+	opacity: 1
+
+.fancybox-close-small
+	color: #fff

@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="libs/animate-css/animate.css">
 	<link rel="stylesheet" href="libs/OwlCarousel2/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/fancybox/dist/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
@@ -70,7 +71,7 @@
 		<div class="header__bottom">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-6 col-md-6">
 						<div class="header__h-logo">
 							<div class="h-logo">
 								<a href="/" class="h-logo__link">
@@ -82,14 +83,14 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3">
 						<div class="header__h-application">
-							<a href="#" class="h-application">
+							<a href="#online-application" class="h-application">
 								Онлайн заявка
 							</a>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3">
 						<div class="header__h-callback">
 							<div class="h-callback">
 								<div class="h-callback__phone">
@@ -105,6 +106,10 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="header__h-catalog">
+							<div class="h-catalog__text">
+								Вид продукции
+							</div>
+							<a href="#" class="h-catalog__mobbtn"></a>
 							<ul class="h-catalog">
 								<li class="h-catalog__item">
 									<a href="#" class="h-catalog__link">
@@ -526,13 +531,154 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page__p-prodmore">
+							<a href="#" class="p-prodmore">
+								В каталог
+							</a>
+							<div class="p-prodmore__promo">
+								Больше в каталоге
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page__p-title">
+							<h2 class="p-title p-title-black">
+								Отзывы <strong>наших клиентов</strong>
+							</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page__p-reviews">
+							<div class="p-reviews">
+								<div class="p-reviews__slider owl-carousel">
+									<a href="img/p-reviews.jpg" class="p-reviews__item" data-fancybox="page-reviews">
+										<img src="img/p-reviews.jpg" alt="alt" class="p-reviews__img">
+									</a>
+									<a href="img/p-reviews.jpg" class="p-reviews__item" data-fancybox="page-reviews">
+										<img src="img/p-reviews.jpg" alt="alt" class="p-reviews__img">
+									</a>
+									<a href="img/p-reviews.jpg" class="p-reviews__item" data-fancybox="page-reviews">
+										<img src="img/p-reviews.jpg" alt="alt" class="p-reviews__img">
+									</a>
+									<a href="img/p-reviews.jpg" class="p-reviews__item" data-fancybox="page-reviews">
+										<img src="img/p-reviews.jpg" alt="alt" class="p-reviews__img">
+									</a>
+								</div>
+								<div class="p-reviews__description">
+									<p>
+										Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+		</div>
+	</div>
+	<footer class="footer" style="background-image: url(img/footer-bg.jpg);">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5">
+					<div class="footer__f-girl">
+						<img src="img/f-girl.png" alt="girl" class="f-girl">
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="footer__f-callback">
+						<div class="f-callback">
+							<div class="f-callback__title">
+								Есть вопросы? <strong>Свяжитесь с нами!</strong>
+							</div>
+							<div class="f-callback__description">
+								Напишите нам сообщение <span>или просто позвоните: +7 (495) 37-37-37</span>
+							</div>
+							<form action="">
+								<div class="f-callback__form">
+									<div class="f-callback__row">
+										<div class="f-callback__left">
+											<div class="f-callback__input-wp">
+												<i class="f-callback__icon" style="background-image: url(img/icons/f-profil.png);"></i>
+												<input type="text" class="f-callback__input" placeholder="Ваше имя*" required>
+											</div>
+										</div>
+										<div class="f-callback__right">
+											<div class="f-callback__input-wp">
+												<i class="f-callback__icon" style="background-image: url(img/icons/f-phone.png);"></i>
+												<input type="text" class="f-callback__input" placeholder="Номер телефона*" required>
+											</div>
+										</div>
+									</div>
+									<div class="f-callback__row">
+										<div class="f-callback__input-wp">
+											<i class="f-callback__icon" style="background-image: url(img/icons/f-message.png);"></i>
+											<textarea name="" id="" class="f-callback__textarea" placeholder="Сообщение"></textarea>
+										</div>
+									</div>
+									<div class="f-callback__row">
+										<div class="f-callback__pol">
+											Отправляя свои данные вы подтверждаете согласие с нашей <a href="#">Политикой конфиденциальности</a>
+										</div>
+										<div class="f-callback__button-wp">
+											<input type="submit" class="f-callback__button" value="Отправить">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="p-popup" id="online-application">
+		<div class="p-popup__title">
+			Онлайн заявка
+		</div>
+		<div class="p-popup__row">
+			<form action="">
+				<div class="f-callback__form">
+					<div class="f-callback__row">
+						<div class="f-callback__left">
+							<div class="f-callback__input-wp">
+								<i class="f-callback__icon" style="background-image: url(img/icons/f-profil.png);"></i>
+								<input type="text" class="f-callback__input" placeholder="Ваше имя*" required>
+							</div>
+						</div>
+						<div class="f-callback__right">
+							<div class="f-callback__input-wp">
+								<i class="f-callback__icon" style="background-image: url(img/icons/f-phone.png);"></i>
+								<input type="text" class="f-callback__input" placeholder="Номер телефона*" required>
+							</div>
+						</div>
+					</div>
+					<div class="f-callback__row">
+						<div class="f-callback__input-wp">
+							<i class="f-callback__icon" style="background-image: url(img/icons/f-message.png);"></i>
+							<textarea name="" id="" class="f-callback__textarea" placeholder="Сообщение"></textarea>
+						</div>
+					</div>
+					<div class="f-callback__row">
+						<div class="f-callback__button-wp">
+							<input type="submit" class="f-callback__button" value="Отправить">
+						</div>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="libs/jquery/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="libs/OwlCarousel2/dist/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
 	<script type="text/javascript">
 		$('.p-baner__slider').owlCarousel({
 			loop:true,
@@ -542,10 +688,33 @@
 			animateOut:'bounceOutLeft',
 			animateIn:'bounceInRight',
 			smartSpeed:450,
+			dots: false,
 			autoplay:true,
 			autoplayTimeout:8000,
 			autoplayHoverPause:true
 		});
+		$('.p-reviews__slider').owlCarousel({
+			loop:false,
+			margin:30,
+			nav:true,
+			animateOut:'bounceOutLeft',
+			animateIn:'bounceInRight',
+			dots: false,
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:2
+				},
+				1000:{
+					items:3
+				}
+			}
+		});
+
+		/*fancybox-reviews*/
+		$('.p-reviews__item').fancybox();
 	</script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<!-- End_Scripts -->
