@@ -143,6 +143,9 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 991px) {
+  .hidden-md {
+    display: none !important;
+  }
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
     padding-left: 10px;
     padding-right: 10px;
@@ -179,22 +182,8 @@
     font-size: 14px;
     color: #fff;
   }
-  .h-catalog__mobbtn {
-    display: block;
-    background-image: url(../img/icons/mob-menu.png);
-    background-position: left center;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 18px;
-    margin: 9px 0;
-    -webkit-transition-property: none;
-    -moz-transition-property: none;
-    -o-transition-property: none;
-    transition-property: none;
-    outline: none !important;
-  }
-  .h-catalog__mobbtn.active {
-    background-position: right center;
+  .h-catalog__text-show {
+    display: none;
   }
   .h-catalog {
     display: none;
@@ -239,14 +228,465 @@
     padding-left: 30px;
     padding-right: 30px;
   }
-  .h-catalog__item.active {
+  .h-catalog__link.active {
     background-color: #000;
+  }
+  .p-advantages-left {
+    margin-right: 0;
+  }
+  .p-advantages-right {
+    margin-left: 0;
+  }
+  .p-advantages::after {
+    display: none !important;
+  }
+  .page__p-advantages {
+    padding-bottom: 20px;
+  }
+  .row-line {
+    margin-top: 14px;
+    padding-top: 30px;
+  }
+  .p-paperview {
+    height: 122px;
+  }
+  .page__section-assortpackage {
+    margin-top: -61px;
+    padding-top: 98px;
+    padding-bottom: 50px;
+  }
+  .p-paperview__title {
+    bottom: auto;
+    top: 70px;
+    height: 46px;
+    overflow: hidden;
+  }
+  .p-prod__img {
+    height: 154px;
+  }
+  .p-prod__description {
+    margin-top: 6px;
+  }
+  .p-prod__info {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .p-prod__info::before, .p-prod__info::after {
+    width: 24px;
+  }
+  .p-prodmore__promo {
+    font-size: 68px;
+  }
+  .page__p-prodmore {
+    padding-top: 54px;
+    margin-bottom: 50px;
+  }
+  .p-reviews__description {
+    padding-top: 32px;
+  }
+  .page__section-tov {
+    padding-bottom: 90px;
+  }
+  .footer__f-girl {
+    padding-right: 0;
+    text-align: center;
+  }
+  .f-girl {
+    display: inline-block;
+    width: 90%;
+    height: auto;
+  }
+  .f-callback__input {
+    height: 35px;
+  }
+  .f-callback__icon {
+    background-position: center 11px;
+  }
+  .f-callback__textarea {
+    height: 88px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .f-callback__pol {
+    font-size: 9px;
+    padding-top: 6px;
+    line-height: 14px;
+  }
+  .f-callback__input-wp {
+    margin-bottom: 12px;
+  }
+  .h-catalog .active::before {
+    display: none !important;
   }
   /**/
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+  .hidden-sm {
+    display: none;
+  }
+  .h-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: none;
+    background-color: #000;
+    z-index: 16;
+    padding-top: 54px;
+    padding-bottom: 54px;
+    margin-top: -1px;
+  }
+  .h-nav__item {
+    width: auto;
+    padding: 0;
+    display: block;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    text-align: center;
+    border-bottom: 1px solid #101010;
+  }
+  .h-nav__item:last-child {
+    border-bottom: none;
+  }
+  .h-nav__link {
+    line-height: 72px;
+    color: #fff;
+    display: block;
+    width: 100%;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: "GilroyExtraBold";
+  }
+  .header__h-nav {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .h-nav__text {
+    line-height: 39px;
+    font-size: 14px;
+    color: #fff;
+    display: block;
+  }
+  .h-nav__mobbtn {
+    margin: 10px 0;
+  }
+  .h-nav__text-show {
+    display: none;
+  }
+  .h-logo {
+    display: block;
+    width: 100%;
+  }
+  .h-logo__link {
+    width: 100px;
+    margin: 0 auto;
+    clear: both;
+  }
+  .h-logo__description {
+    width: 262px;
+    display: block;
+    margin: 0 auto;
+    clear: top;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 0;
+    padding-top: 15px;
+  }
+  .header__h-logo::after {
+    display: none;
+  }
+  .header__h-application {
+    border-top: 1px solid #e6e6e6;
+  }
+  .header__h-logo {
+    padding: 20px 0;
+  }
+  .header__h-application {
+    padding-top: 20px;
+    text-align: center;
+  }
+  .h-application {
+    height: 56px;
+    line-height: 49px;
+    padding: 0 65px;
+    font-size: 14px;
+  }
+  .header__h-callback {
+    text-align: center;
+    padding-top: 28px;
+    padding-bottom: 20px;
+  }
+  .h-callback__phone {
+    font-size: 26px;
+    padding-left: 34px;
+    margin-bottom: 4px;
+  }
+  .h-callback__phone::before {
+    width: 19px;
+    height: 21px;
+    margin-top: -10.5px;
+  }
+  .h-callback__button {
+    font-size: 15px;
+  }
+  .h-catalog__text {
+    line-height: 62px;
+  }
+  .h-catalog__mobbtn {
+    margin: 22px 0;
+  }
+  .header__h-catalog {
+    padding: 0 18px;
+  }
+  .p-baner__popup {
+    width: auto;
+    left: 18px;
+    right: 18px;
+    top: auto;
+    bottom: -45px;
+    text-align: center;
+    -webkit-box-shadow: 12px 12px 38px 0px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 12px 12px 38px 0px rgba(0, 0, 0, 0.19);
+    box-shadow: 12px 12px 38px 0px rgba(0, 0, 0, 0.19);
+  }
+  .p-baner__popup {
+    padding: 30px 20px;
+  }
+  .p-baner__item {
+    height: 253px;
+  }
+  .p-baner__description {
+    line-height: 22px;
+  }
+  .p-baner__button {
+    height: 56px;
+    line-height: 49px;
+    font-size: 14px;
+    padding: 0 65px;
+  }
+  .p-baner__description {
+    padding: 0;
+    margin: 20px 0;
+    display: block;
+    height: 66px;
+    overflow: hidden;
+  }
+  .p-title {
+    width: 285px;
+    margin: 0 auto;
+  }
+  .page__p-description p {
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+  .p-advantages-left,
+  .p-advantages-right {
+    text-align: center;
+  }
+  .p-advantages-left .p-advantages__title,
+  .p-advantages-right .p-advantages__title {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .p-advantages {
+    padding: 20px 40px;
+  }
+  .p-advantages__title {
+    padding-top: 46px;
+  }
+  .p-advantages__icon {
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: none;
+    -webkit-transform: none;
+    margin: 0 auto;
+    background-position: center center !important;
+  }
+  .row-line {
+    margin-top: 20px;
+    padding-top: 30px;
+    background-color: #fff;
+    padding-bottom: 20px;
+  }
+  .row-line::before {
+    display: none !important;
+  }
+  .p-paperview {
+    height: 200px;
+    width: 270px;
+    margin: 0 auto;
+  }
+  .page__p-paperview {
+    padding-bottom: 25px;
+  }
+  .p-paperview__title {
+    top: auto;
+    bottom: 12px;
+    height: auto;
+  }
+  .page__section-assortpackage {
+    margin-top: 0;
+    padding-top: 70px;
+    padding-bottom: 36px;
+  }
+  .p-assortpackage__description {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .p-assortpackage__title {
+    max-width: 340px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+  .p-prod {
+    width: 270px;
+    margin: 0 auto;
+  }
+  .p-prod__img {
+    height: 246px;
+  }
+  .page__p-prod {
+    padding-bottom: 30px;
+  }
+  .p-prod__info {
+    margin-top: 19px;
+    padding-top: 18px;
+  }
+  .p-prod__title {
+    font-size: 17px;
+  }
+  .p-prod__description {
+    font-size: 14px;
+  }
+  .p-prod__description {
+    margin-top: 12px;
+  }
+  .page__section-tov {
+    padding-top: 40px;
+  }
+  .p-prodmore__promo {
+    display: none;
+  }
+  .page__p-prodmore {
+    padding-top: 30px;
+    margin-bottom: 80px;
+  }
+  .p-prodmore {
+    height: 56px;
+    line-height: 49px;
+    padding: 0 65px;
+    font-size: 14px;
+  }
+  .p-reviews__slider {
+    margin-top: 10px;
+  }
+  .page__p-title {
+    padding-top: 19px;
+  }
+  .page__p-title::before {
+    width: 30px;
+    height: 3px;
+  }
+  .p-reviews__item {
+    max-width: 369px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .owl-dots {
+    padding-top: 17px;
+  }
+  .p-reviews__description p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .hidden-sm {
+    display: none;
+  }
+  .page__section-tov {
+    padding-bottom: 35px;
+  }
+  .footer {
+    padding: 40px 0;
+  }
+  .f-callback__title {
+    font-size: 17px;
+  }
+  .f-callback__description {
+    margin: 0 auto;
+    display: block;
+    font-size: 15px;
+  }
+  .f-callback__description span {
+    display: block;
+    font-family: "GilroyExtraBold";
+  }
+  .f-callback__left,
+  .f-callback__right {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+  .f-callback__input {
+    height: 54px;
+    font-size: 17px;
+  }
+  .f-callback__icon {
+    background-position: center 18px;
+  }
+  .f-callback__textarea {
+    height: 135px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 17px;
+  }
+  .f-callback__button-wp {
+    float: left;
+    width: 100%;
+  }
+  .f-callback__pol {
+    float: right;
+    width: 100%;
+  }
+  .visible-sm {
+    display: block !important;
+  }
+  .f-callback__pol {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    padding-right: 0;
+    padding-top: 16px;
+  }
+  .footer__f-callback {
+    display: block;
+    width: 100%;
+  }
+  .f-callback__button {
+    height: 56px;
+    line-height: 49px;
+    font-size: 14px;
+  }
+  .f-callback__input-wp {
+    margin-bottom: 20px;
+  }
+  .f-callback__title {
+    padding-top: 14px;
+  }
+  .f-callback__title::before {
+    width: 30px;
+    height: 3px;
+  }
   /**/
 }
 
@@ -273,6 +713,12 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
+  .h-nav__text {
+    display: none;
+  }
+  .h-nav__mobbtn {
+    display: none;
+  }
   /**/
 }
 

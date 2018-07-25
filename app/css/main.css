@@ -71,6 +71,33 @@ a, button {
   background-position: right center !important;
 }
 
+.owl-dots {
+  font-size: 0;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.owl-dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.owl-dot span {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  margin: 2px;
+  background-color: #ec2452;
+}
+
+.owl-dot.active {
+  background-color: #ec2452 !important;
+}
+
 .fancybox-close-small svg {
   fill: #fff;
   opacity: 1;
@@ -94,6 +121,10 @@ body {
 /*header*/
 .header__top {
   background-color: #000;
+}
+
+.header__top-active {
+  background-color: #101010;
 }
 
 .header__h-nav {
@@ -131,6 +162,10 @@ body {
   display: block;
   width: 100%;
   background-color: #e03359;
+}
+
+.header__h-catalog-active {
+  background-color: #000;
 }
 
 /*page*/
@@ -1223,4 +1258,23 @@ body {
 
 .p-popup__row {
   padding-top: 16px;
+}
+
+.mobbtn {
+  display: block;
+  background-image: url(../img/icons/mob-menu.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 18px;
+  margin: 9px 0;
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+  outline: none !important;
+}
+
+.mobbtn.active {
+  background-position: right center;
 }
