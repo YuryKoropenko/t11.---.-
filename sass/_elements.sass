@@ -494,9 +494,19 @@
 	&__img
 		height: 247px
 		width: 100%
-		display: block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
 		background-size: cover
 		background-position: center center
+		-webkit-flex-wrap: wrap
+		-ms-flex-wrap: wrap
+		flex-wrap: wrap
+		position: relative
 	&__info
 		margin-top: 19px
 		position: relative
@@ -532,6 +542,9 @@
 		font-size: 20px
 		color: #000
 		font-family: "GilroyExtraBold", sans-serif
+		&:hover
+			color: #000
+			text-decoration: none
 	&__description
 		display: block
 		margin-top: 12px
@@ -540,6 +553,73 @@
 		line-height: 24px
 		height: 24 * 3 + px
 		overflow: hidden
+	&__more
+		height: 41px
+		border-radius: 20px
+		width: 60%
+		display: block
+		text-align: center
+		border: 2px solid #e03359
+		background-color: #e03359
+		line-height: 34px
+		color: #fff
+		font-size: 14px
+		margin: 0 auto 15px
+		span
+			display: inline-block
+			padding-right: 18px
+			position: relative
+			&::after
+				content: ''
+				display: block
+				width: 5px
+				height: 9px
+				right: 0
+				top: 50%
+				margin-top: -4.5px
+				background-image: url(../img/icons/white-arrow.png)
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center center
+				position: absolute
+		&:hover
+			color: #fff
+			text-decoration: none
+			background-color: transparent
+	&__callback
+		height: 41px
+		border-radius: 20px
+		width: 60%
+		margin: 0 auto
+		display: block
+		text-align: center
+		border: 2px solid #ffffff
+		background-color: #ffffff
+		line-height: 34px
+		color: #e03359
+		font-size: 14px
+		&:hover
+			background-color: transparent
+			color: #e03359
+			text-decoration: none
+	&__wp
+		display: none
+		width: 100%
+		text-align: center
+		position: relative
+		z-index: 1
+	&:hover
+		.p-prod__img
+			&::after
+				content: ''
+				left: 0
+				position: absolute
+				right: 0
+				top: 0
+				bottom: 0
+				background-color: rgba(#000,.61)
+		.p-prod__wp
+			display: block
 
 .p-prodmore
 	display: inline-block
@@ -887,8 +967,11 @@
 		padding-left: 19px
 		padding-right: 19px
 		border-top: 1px solid #e6e6e6
+		display: none
 	&__item-1
 		border-bottom: 1px solid #e6e6e6
+		&:last-child
+			border-bottom: none
 	&__link-1
 		height: 46px
 		display: -webkit-flex
@@ -901,6 +984,7 @@
 		color: #000
 		padding-right: 23px
 		position: relative
+		padding-left: 6px
 		&:hover
 			text-decoration: none
 			color: #000
@@ -923,9 +1007,316 @@
 		.p-left__link-1
 			color: #e03359
 	&__menu-2
-		border-top: 1px solid #e6e6e6
 		padding-top: 18px
+		border: none
+		&:last-child
+			padding-bottom: 18px
+	&__last
+		display: none
+		border-top: 1px solid #e6e6e6
 	&__subtitle
+		font-size: 15px
+		display: block
+		font-family: "GilroyExtraBold", sans-serif
+		margin-left: -7px
+		width: auto
+		padding-left: 28px
+		position: relative
+		margin-bottom: 8px
+		&::before
+			content: ''
+			width: 16px
+			height: 3px
+			display: block
+			background-color: #e03359
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -1.5px
 	&__list-2
+		margin-left: 32px
+		width: auto
 	&__item-2
+		padding-bottom: 8px
 	&__link-2
+		font-size: 15px
+		color: #000
+		position: relative
+		padding-left: 15px
+		display: block
+		&::before
+			content: ''
+			display: block
+			width: 4px
+			height: 7px
+			background-image: url(../img/icons/list-arrow.png)
+			background-repeat: no-repeat
+			background-size: cover
+			position: absolute
+			left: 0
+			top: 5px
+		&:hover
+			color: #000
+			text-decoration: underline
+
+.p-line
+	@include clearfix
+	display: block
+	&__left
+		@include clearfix
+		padding-left: 20px
+		float: left
+		width: 50%
+		text-align: left
+	&__text
+		line-height: 64px
+		display: block
+		float: left
+		font-size: 14px
+		color: #fff
+		padding-right: 18px
+	&__search
+		position: relative
+		display: block
+		float: left
+		margin-top: 12px
+	&__input
+		height: 40px
+		background-color: #fff
+		border: none
+		padding-left: 10px
+		font-size: 14px
+		color: #000
+		padding-right: 46px
+		@include placeholder(#c0c0c0)
+		width: 265px
+		display: block
+	&__button
+		width: 46px
+		display: block
+		border: none
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		background-color: #e03359
+		text-indent: -9999px
+		background-image: url(../img/icons/white-search.png)
+		background-repeat: no-repeat
+		background-position: center center
+		cursor: pointer
+		z-index: 2
+	&__pagin
+		padding-top: 19px
+		width: 34%
+		float: left
+		text-align: center
+	&__list
+		font-size: 0
+		@include clearfix
+	&__link
+		color: #fff
+		font-size: 14px
+		line-height: 16px
+		padding: 0 4px
+		&:hover
+			color: #e03359
+			text-decoration: none
+	&__item
+		display: block
+		float: left
+		&-first
+			width: 31px
+			position: relative
+			height: 16px
+			margin-right: 12px
+			&::after
+				content: ''
+				display: block
+				width: 1px
+				height: 16px
+				background-color: #2b2b2b
+				position: absolute
+				right: 0
+				top: 50%
+				margin-top: -8px
+			.p-line__link
+				width: 12px
+				height: 10px
+				background-image: url(../img/icons/p-pagin.png)
+				background-repeat: no-repeat
+				background-position: left top
+				position: absolute
+				left: 0
+				top: 50%
+				margin-top: -5px
+				padding: 0
+				-webkit-transition-property: none
+				-moz-transition-property: none
+				-o-transition-property: none
+				transition-property: none
+				outline: none !important
+				&:hover
+					background-position: right top
+		&-last
+			width: 31px
+			position: relative
+			height: 16px
+			margin-left: 12px
+			&::before
+				content: ''
+				display: block
+				width: 1px
+				position: absolute
+				height: 16px
+				background-color: #2b2b2b
+				left: 0
+				top: 50%
+				margin-top: -8px
+			.p-line__link
+				width: 12px
+				height: 10px
+				background-image: url(../img/icons/p-pagin.png)
+				background-repeat: no-repeat
+				background-position: left bottom
+				position: absolute
+				right: 0
+				top: 50%
+				margin-top: -5px
+				padding: 0
+				-webkit-transition-property: none
+				-moz-transition-property: none
+				-o-transition-property: none
+				transition-property: none
+				outline: none !important
+				&:hover
+					background-position: right bottom
+	&__vid
+		@include clearfix
+		width: 16%
+		float: right
+		text-align: right
+		padding-right: 24px
+	&__list-1
+		float: left
+		@include clearfix
+		display: block
+		padding-top: 23px
+		width: 57px
+	&__item-1
+		display: block
+		float: left
+		padding-left: 21px
+		position: relative
+		&::before
+			content: ''
+			height: 16px
+			width: 1px
+			background-color: #2b2b2b
+			top: 50%
+			margin-top: -8px
+			left: 10px
+			position: absolute
+			display: block
+		&:first-child
+			padding-left: 0
+			&::before
+				display: none !important
+	&__link-1
+		width: 18px
+		height: 17px
+		display: block
+		background-image: url(../img/icons/p-vid.png)
+		&:hover
+			text-decoration: none
+			color: inherit
+	&__item-1.active
+		.p-line__link-1
+			background-position-x: right !important
+	&__wrapper
+		display: inline-block
+		@include clearfix
+		margin-bottom: -6px
+
+.p-pagination
+	@include clearfix
+	&__item
+		float: left
+		padding: 0 6px
+	&__link
+		width: 34px
+		height: 34px
+		display: block
+		border: 1px solid #000000
+		line-height: 32px
+		text-align: center
+		font-size: 16px
+		color: #000
+		&:hover
+			background-color: #000
+			color: #fff
+			text-decoration: none
+	&__item
+		&-first
+			padding-right: 20px
+			padding-left: 0
+			.p-pagination__link
+				border-color: #e03359
+				position: relative
+				&::before
+					display: block
+					content: ''
+					background-image: url(../img/icons/paginbig.png)
+					width: 12px
+					height: 10px
+					background-position: left center
+					position: absolute
+					left: 50%
+					top: 50%
+					margin-left: -6px
+					margin-top: -5px
+				&:hover
+					background-color: transparent
+					background-color: #e03359
+		&-last
+			padding-left: 20px
+			padding-right: 0
+			.p-pagination__link
+				border-color: #e03359
+				position: relative
+				&::before
+					display: block
+					content: ''
+					background-image: url(../img/icons/paginbig.png)
+					width: 12px
+					height: 10px
+					background-position: right center
+					position: absolute
+					left: 50%
+					top: 50%
+					margin-left: -6px
+					margin-top: -5px
+				&:hover
+					background-color: transparent
+					background-color: #e03359
+	&__item.active
+		.p-pagination__link
+			background-color: #000
+			color: #fff
+
+.p-catalogmore
+	height: 56px
+	line-height: 49px
+	padding: 0 65px
+	font-size: 14px
+	border: 2px solid #e03359
+	background-color: #e03359
+	color: #fff
+	font-family: "GilroyExtraBold", sans-serif
+	-webkit-box-shadow: 3px 3px 0px 0px black
+	-moz-box-shadow: 3px 3px 0px 0px black
+	box-shadow: 3px 3px 0px 0px black
+	display: inline-block
+	&:hover
+		background-color: transparent
+		color: #e03359

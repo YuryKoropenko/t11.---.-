@@ -104,7 +104,16 @@
 		padding: 0 20px
 	.p-popup__title
 		font-size: 20px
-
+	.p-line__pagin
+		display: none
+	.p-line__vid
+		width: 25%
+	.p-line__left
+		width: 75%
+	.p-line__input
+		width: 278px
+	.p-left__title
+		font-size: 17px
 	/**/
 
 
@@ -220,8 +229,8 @@
 		margin-bottom: 50px
 	.p-reviews__description
 		padding-top: 32px
-	.page__section-tov
-		padding-bottom: 90px
+	.footer
+		margin-top: 90px
 	.footer__f-girl
 		padding-right: 0
 		text-align: center
@@ -245,6 +254,61 @@
 		margin-bottom: 12px
 	.h-catalog .active::before
 		display: none !important
+	.p-name
+		font-size: 17px
+	.page__section-content
+		margin-top: 20px
+	.page__p-pagination
+		border-bottom: none
+	.page__p-text
+		h2
+			font-size: 17px
+			padding-bottom: 20px
+			&::after
+				width: 33px
+				height: 4px
+		p
+			font-size: 14px
+			line-height: 18px
+			padding-bottom: 18px
+		img
+			margin-bottom: 20px
+		h3
+			padding-bottom: 18px
+			font-size: 14px
+		blockquote
+			font-size: 14px
+			line-height: 18px
+			padding-left: 26px
+			padding-top: 15px
+			padding-bottom: 15px
+			margin-bottom: 20px
+		li
+			font-size: 14px
+			line-height: 18px
+			&::before
+				top: 5px
+		ul
+			padding-bottom: 20px
+		thead
+			th
+				font-size: 14px
+				line-height: 18px
+		tbody
+			td
+				font-size: 14px
+				line-height: 18px
+	.page__p-line,
+	.page__p-prods,
+	.page__p-pagination
+		margin-left: 0
+	.page__p-left
+		margin-right: 0
+		padding-bottom: 0
+	.page__p-pagination
+		padding-top: 4px
+	.page__p-left
+		padding-top: 0
 	/**/
 
 
@@ -446,8 +510,8 @@
 		font-size: 14px
 	.p-prod__description
 		margin-top: 12px
-	.page__section-tov
-		padding-top: 40px
+	.footer
+		margin-top: 40px
 	.p-prodmore__promo
 		display: none
 	.page__p-prodmore
@@ -477,8 +541,8 @@
 		line-height: 24px
 	.hidden-sm
 		display: none
-	.page__section-tov
-		padding-bottom: 35px
+	.footer
+		margin-top: 35px
 	.footer
 		padding: 40px 0
 	.f-callback__title
@@ -533,9 +597,96 @@
 		&::before
 			width: 30px
 			height: 3px
+	.p-line__vid
+		display: none
+	.p-line__left
+		width: 100%
+		float: none
+		padding-left: 26px
+		padding-right: 26px
+		display: block
+	.p-line__search
+		float: none
+		margin-top: 0
+		width: 100%
+	.p-line__input
+		width: 100%
+	.p-line__text
+		float: none
+		width: 152px
+	.p-line__wrapper
+		width: 100%
+		display: block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		margin-bottom: 0
+		align-items: center
+	.page__p-left
+		max-width: 300px
+		margin: 0 auto
+	.page__p-text img
+		width: 270px
+		margin: 0 auto 20px
+	.page__p-pagination
+		display: none
+	.page__p-prods .page__p-prod
+		margin-bottom: 0
+	.page__p-prod
+		padding-bottom: 30px
+	.page__p-text table
+		display: none
+	.mob-table
+		margin-bottom: 30px
+	.mob-table__top
+		font-size: 14px
+		line-height: 18px
+		background-color: #000
+		position: relative
+		height: 70px
+		color: #fff
+		display: block
+		width: 100%
+		span
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			-webkit-transform: translateY(-50%)
+			left: 15px
+			right: 15px
+			width: auto
+			display: block
+	.mob-table__content
+	.mob-table__item
+		height: 70px
+		font-size: 14px
+		line-height: 18px
+		color: #000
+		position: relative
+		display: block
+		width: 100%
+		border: 1px solid #e5e5e5
+		border-top: none
+		span
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			-webkit-transform: translateY(-50%)
+			left: 15px
+			right: 15px
+			width: auto
+			display: block
 
 	/**/
 
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 533px)
+	.p-line__text
+		width: 209px
+	/**/
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -564,6 +715,10 @@
 	.h-nav__text
 		display: none
 	.h-nav__mobbtn
+		display: none
+	.page__p-catalogmore
+		display: none
+	.mob-table
 		display: none
 	/**/
 
