@@ -2,6 +2,7 @@ $(function() {
 
 	/*Онлайн заявка*/
 	$('.h-application').fancybox();
+	$('.h-callback__button').fancybox();
 
 	$('.h-catalog__item .h-catalog__link').on('click', function() {
 		return false;
@@ -69,6 +70,9 @@ $(function() {
 	if( $(window).width() < 992 ) {
 		$('.col-lg-3').removeClass('order-first');
 	}
+	/**/
+	var lsliderwidth = $('.p-leftslider__subimg').width();
+	$('.p-leftslider__subimg').height(lsliderwidth);
 
 	/*левое меню каталога*/
 	$('.p-left__link').on('click', function() {
@@ -96,6 +100,39 @@ $(function() {
 			$(this).parent('.p-left__item-1').children('.p-left__last').slideToggle(200);
 			return false;
 		}
+	});
+
+	/*Гармокшка - карточка товара*/
+	$('.p-harmonic__link').on('click', function() {
+		if($(this).parent('.p-harmonic__item').hasClass('active') == true) {
+			return false;
+		} else {
+			$('.p-harmonic__item').removeClass('active');
+			$('.p-harmonic__description').slideUp(200);
+			$(this).parent('.p-harmonic__item').toggleClass('active');
+			$(this).parent('.p-harmonic__item').children('.p-harmonic__description').slideToggle(200);
+			return false;
+		}
+	});
+
+	/*select в карточке товара*/
+	$('.p-card__numb').on('click', function() {
+		$(this).parent('.p-card__select').toggleClass('active');
+		$(this).parent('.p-card__select').children('.p-card__unit').slideToggle(200);
+		$(document).click(function(event) {
+			if ($(event.target).closest('.p-card__unit').length) return;
+				$('.p-card__select').removeClass('active');
+				$('.p-card__unit').slideUp(200);
+				event.stopPropagation();
+			});
+		return false
+	});
+	$('.p-card__sublink').on('click', function() {
+		var text = $(this).text();
+		$('.p-card__numb').text(text);
+		$('.p-card__select').removeClass('active');
+		$('.p-card__unit').slideUp(200);
+		return false;
 	});
 
 
