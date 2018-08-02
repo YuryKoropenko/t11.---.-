@@ -472,7 +472,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="p-tabs hidden-lg">
+							<div class="p-tabs hidden-lg p-tabs-pc">
 								<ul class="p-tabs__tabs">
 									<li class="p-tabs__tab active">
 										Описание
@@ -637,7 +637,7 @@
 						</ul>
 					</div>
 					<div class="col-md-7">
-						<div class="p-tabs">
+						<div class="p-tabs p-tabs-mob">
 							<ul class="p-tabs__tabs">
 								<li class="p-tabs__tab active">
 									Описание
@@ -1213,9 +1213,12 @@
 				}
 			}
 		});
-		$(document).ready(function(){
-			$('.p-tabs').lightTabs();
-		});
+		if( $(window).width() >= 1200 ) {
+			$('.p-tabs-pc').lightTabs();
+		}
+		if( $(window).width() < 1200 ) {
+			$('.p-tabs-mob').lightTabs();
+		}
 	</script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<!-- End_Scripts -->
