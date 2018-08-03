@@ -262,6 +262,16 @@
   .p-tabs__table {
     padding: 5.55px 0;
   }
+  .p-prod__subitem {
+    line-height: 18px;
+    font-size: 12px;
+  }
+  .page__p-prods-1 .p-prod__info {
+    padding-top: 17px;
+  }
+  .page__p-prods-1 .p-prod__right {
+    padding-top: 54px;
+  }
   /**/
 }
 
@@ -517,6 +527,12 @@
   }
   .page__section-noslider .page__p-path {
     margin-bottom: 20px;
+  }
+  .page__p-prods-1 .p-prod__info {
+    padding-top: 24px;
+  }
+  .page__p-prods-1 .p-prod__right {
+    padding-top: 61px;
   }
   /**/
 }
@@ -1044,6 +1060,12 @@
   }
   .p-card__row {
     margin-bottom: 0;
+  }
+  .page__p-prods-2 {
+    display: block !important;
+  }
+  .page__p-prods-1 {
+    display: none !important;
   }
   /**/
 }

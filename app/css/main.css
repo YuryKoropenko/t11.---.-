@@ -348,6 +348,80 @@ body {
   margin-bottom: 20px;
 }
 
+.page__p-prods-1 {
+  padding-bottom: 15px;
+}
+
+.page__p-prods-1 .page__p-prod {
+  margin-bottom: 5px;
+}
+
+.page__p-prods-1 .p-prod {
+  display: block;
+  border: none;
+}
+
+.page__p-prods-1 .p-prod::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.page__p-prods-1 .p-prod__description {
+  line-height: 18px;
+  height: auto;
+  max-height: 54px;
+  margin-top: 20px;
+}
+
+.page__p-prods-1 .p-prod__img {
+  width: 20%;
+  float: left;
+  position: relative;
+}
+
+.page__p-prods-1 .p-prod__img a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  z-index: 1;
+}
+
+.page__p-prods-1 .p-prod__img::after {
+  display: none !important;
+}
+
+.page__p-prods-1 .p-prod__title {
+  text-align: left;
+}
+
+.page__p-prods-1 .p-prod__info {
+  width: 30%;
+  float: left;
+  margin-top: 0;
+  padding-top: 24px;
+  padding-bottom: 0;
+}
+
+.page__p-prods-1 .p-prod__info::before {
+  display: none;
+}
+
+.page__p-prods-1 .p-prod__info::after {
+  display: none;
+}
+
+.page__p-prods-1 .p-prod__wp {
+  display: none !important;
+}
+
+.page__p-prods-1 .p-prod__right {
+  padding-top: 69px;
+}
+
 .page__p-pagination {
   margin-left: 18px;
   display: -webkit-flex;
@@ -1388,6 +1462,27 @@ body {
   display: block;
 }
 
+.p-prod__right {
+  width: 50%;
+  float: left;
+}
+
+.p-prod__subitem {
+  color: #000;
+  font-size: 15px;
+  line-height: 18px;
+  position: relative;
+  padding-right: 50%;
+}
+
+.p-prod__subitem span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 0;
+}
+
 .p-prodmore {
   display: inline-block;
   height: 56px;
@@ -1425,6 +1520,11 @@ body {
   right: 0;
   z-index: -1;
   line-height: 100%;
+}
+
+.p-prodmore__right {
+  width: 50%;
+  float: left;
 }
 
 .p-reviews__slider {
@@ -2241,6 +2341,10 @@ body {
   height: 17px;
   display: block;
   background-image: url(../img/icons/p-vid.png);
+  transition: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  -moz-transition: none;
 }
 
 .p-line__link-1:hover {

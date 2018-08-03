@@ -62,6 +62,27 @@ $(function() {
 		});
 	}
 
+	/*переключение вида*/
+	$('.p-line__item-1 .p-line__link-1').on('click', function() {
+		var carentvid = $(this).attr('href');
+		if(carentvid == 'vid-1') {
+			$('.p-line__item-1').removeClass('active');
+			$('.page__p-prods').hide();
+			$(this).parent().addClass('active');
+			$('.page__p-prods-1').show();
+			var catheight = $('.page__p-prods-1 .p-prod__img').width();
+			$('.page__p-prods-1 .p-prod__img').height(catheight);
+			return false;
+		}
+		if(carentvid == 'vid-2') {
+			$('.p-line__item-1').removeClass('active');
+			$('.page__p-prods').hide();
+			$(this).parent().addClass('active');
+			$('.page__p-prods-2').show();
+			return false;
+		}
+	});
+
 	/*замена картинки на телефоне footer*/
 	if( $(window).width() < 768 ) {
 		$('.footer').css('background-image', 'url(img/footer-mob-bg.jpg)');

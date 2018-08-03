@@ -145,6 +145,49 @@ body
 			margin-left: -10px
 		.page__p-prod
 			margin-bottom: 20px
+		&-1
+			padding-bottom: 15px
+			.page__p-prod
+				margin-bottom: 5px
+			.p-prod
+				@include clearfix
+				display: block
+				border: none
+			.p-prod__description
+				line-height: 18px
+				height: auto
+				max-height: 54px
+				margin-top: 20px
+			.p-prod__img
+				width: 20%
+				float: left
+				position: relative
+				a
+					position: absolute
+					left: 0
+					right: 0
+					top: 0
+					bottom: 0
+					display: block
+					z-index: 1
+				&::after
+					display: none !important
+			.p-prod__title
+				text-align: left
+			.p-prod__info
+				width: 30%
+				float: left
+				margin-top: 0
+				padding-top: 24px
+				padding-bottom: 0
+				&::before
+					display: none
+				&::after
+					display: none
+			.p-prod__wp
+				display: none !important
+			.p-prod__right
+				padding-top: 69px
 	&__p-pagination
 		margin-left: 18px
 		display: -webkit-flex
